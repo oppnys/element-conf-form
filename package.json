@@ -1,7 +1,8 @@
 {
   "name": "element-conf-form",
   "version": "1.0.0",
-  "description": "",
+  "author": "dontian<liu6xd@gmail.com>",
+  "description": "A configurable element-ui form",
   "main": "dist/element-conf-form.ssr.js",
   "browser": "dist/element-conf-form.esm.js",
   "module": "dist/element-conf-form.esm.js",
@@ -20,6 +21,11 @@
   },
   "dependencies": {
     "element-ui": "^2.15.1"
+  },
+  "homepage": "https://github.com/oppnys/element-conf-form",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oppnys/element-conf-form"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
