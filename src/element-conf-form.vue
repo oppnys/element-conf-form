@@ -7,9 +7,15 @@
       :prop="item.property"
     >
       <template v-if="item.type === FormType.INPUT && propertyFilter(item)">
-        <el-input placeholder="请输入" v-model="rulesData[item.property]" v-bind="item.attrs"></el-input>
+        <el-input
+          placeholder="请输入"
+          v-model="rulesData[item.property]"
+          v-bind="item.attrs"
+        ></el-input>
       </template>
-      <template v-else-if="item.type === FormType.SELECT && propertyFilter(item)">
+      <template
+        v-else-if="item.type === FormType.SELECT && propertyFilter(item)"
+      >
         <el-select v-model="rulesData[item.property]" v-bind="item.attrs">
           <el-option
             v-for="option in item.options"
@@ -21,27 +27,39 @@
       </template>
       <template v-if="item.type === FormType.RADIO && propertyFilter(item)">
         <el-radio-group v-model="rulesData[item.property]" v-bind="item.attrs">
-          <el-radio v-for="radio in item.options" :key="radio.value" v-bind="radio.attrs" :label="radio.value">
+          <el-radio
+            v-for="radio in item.options"
+            :key="radio.value"
+            v-bind="radio.attrs"
+            :label="radio.value"
+          >
             {{ radio.label }}
           </el-radio>
         </el-radio-group>
       </template>
-      <template v-if="item.type === FormType.RADIOBUTTON && propertyFilter(item)">
+      <template
+        v-if="item.type === FormType.RADIOBUTTON && propertyFilter(item)"
+      >
         <el-radio-group v-model="rulesData[item.property]" v-bind="item.attrs">
-          <el-radio-button v-for="radio in item.options" :key="radio.value" v-bind="radio.attrs" :label="radio.value">
+          <el-radio-button
+            v-for="radio in item.options"
+            :key="radio.value"
+            v-bind="radio.attrs"
+            :label="radio.value"
+          >
             {{ radio.label }}
           </el-radio-button>
         </el-radio-group>
       </template>
       <template v-if="item.type === FormType.SWITCH && propertyFilter(item)">
-        <el-switch
-          v-model="rulesData[item.property]"
-          v-bind="item.attrs"
-        >
+        <el-switch v-model="rulesData[item.property]" v-bind="item.attrs">
         </el-switch>
       </template>
       <template v-if="item.type === FormType.SLIDER && propertyFilter(item)">
-        <el-slider v-model="rulesData[item.property]" v-bind="item.attrs"></el-slider>
+        <el-slider
+          v-model="rulesData[item.property]"
+          v-bind="item.attrs"
+        ></el-slider>
       </template>
       <template v-if="item.type === FormType.CASCADER && propertyFilter(item)">
         <el-cascader
@@ -50,18 +68,16 @@
           v-bind="item.attrs"
         ></el-cascader>
       </template>
-      <template v-if="item.type === FormType.TIMEPICKER && propertyFilter(item)">
-        <el-time-select
-          v-model="rulesData[item.property]"
-          v-bind="item.attrs"
-        >
+      <template
+        v-if="item.type === FormType.TIMEPICKER && propertyFilter(item)"
+      >
+        <el-time-select v-model="rulesData[item.property]" v-bind="item.attrs">
         </el-time-select>
       </template>
-      <template v-if="item.type === FormType.DATEPICKER && propertyFilter(item)">
-        <el-date-picker
-          v-model="rulesData[item.property]"
-          v-bind="item.attrs"
-        >
+      <template
+        v-if="item.type === FormType.DATEPICKER && propertyFilter(item)"
+      >
+        <el-date-picker v-model="rulesData[item.property]" v-bind="item.attrs">
         </el-date-picker>
       </template>
       <template v-else-if="item.type === FormType.BUTTON">
@@ -74,7 +90,6 @@
           {{ button.value }}
         </el-button>
       </template>
-
     </el-form-item>
   </el-form>
 </template>
@@ -145,11 +160,9 @@ export default {
       }
       return null
     }
-
   }
 }
 </script>
 
 <style scoped>
-
 </style>
