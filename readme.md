@@ -6,27 +6,29 @@
 #### usage:
 
 ```
-
 <template>
-  <div id="app">
-    <element-conf-form ref="searchForm" :forms="forms" inline />
+  <div class="hello">
+    <element-conf-form ref="forms" :forms="forms" inline></element-conf-form>
   </div>
 </template>
 
-<script>
-import Vue from 'vue'
-import ElementConfForm from 'element-conf-form'
-import FormType from 'element-conf-form/formType'
 
-export default Vue.extend({
-  name: 'ServeDev',
+<script>
+import ElementConfForm from 'element-conf-form'
+
+export default {
+  name: 'HelloWorld',
+  props: {
+    msg: String
+  },
+  components: {ElementConfForm},
   data() {
     return {
       forms: [
         {
-          type: FormType.INPUT,
+          type: 'input',
           property: 'name',
-          label: '系统名称',
+          label: '名称',
           value: '',
           labelWidth: 80,
           attrs: {
@@ -35,20 +37,20 @@ export default Vue.extend({
           }
         },
         {
-          type: FormType.SELECT,
+          type: 'select',
           property: 'protocolType',
-          label: '协议类型',
+          label: '性别',
           value: '',
           attrs: {
             placeholder: '请选择'
           },
           options: [
-            { label: 'HTTP', value: 1 },
-            { label: 'HTTPS', value: 2 }
+            {label: '男', value: 1},
+            {label: '女', value: 2}
           ]
         },
         {
-          type: FormType.BUTTON,
+          type: 'button',
           buttons: [
             {
               value: '搜索',
@@ -73,21 +75,17 @@ export default Vue.extend({
       ]
     }
   },
-  components: {
-    ElementConfForm
-  },
   methods: {
+    // 搜索
     search(params) {
       console.log('搜索：', params)
     },
     // 重置
     reset() {
-      this.$refs.searchForm.clearForm()
-      console.log(this.forms)
+      this.$refs.forms.clearForm()
     }
   }
-})
+}
 </script>
-
 
 ```
