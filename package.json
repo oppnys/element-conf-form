@@ -1,6 +1,6 @@
 {
   "name": "element-conf-form",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "dontian<liu6xd@gmail.com>",
   "description": "A configurable element-ui form",
   "main": "dist/element-conf-form.ssr.js",
