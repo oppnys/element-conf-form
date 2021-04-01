@@ -1,6 +1,6 @@
 {
   "name": "element-conf-form",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "dontian<liu6xd@gmail.com>",
   "description": "A configurable element-ui form",
   "main": "dist/element-conf-form.ssr.js",
@@ -27,6 +27,11 @@
     "type": "git",
     "url": "https://github.com/oppnys/element-conf-form"
   },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "form"
+  ],
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
